@@ -1,0 +1,22 @@
+package example;
+import java.util.*;
+public class happyyyy {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int a=sc.nextInt();
+	while(a!=1&&a!=4) {
+		a=SquareAndSum(a);
+	}
+	System.out.println(a==1);
+	sc.close();
+}
+public static int SquareAndSum(int a) {
+	int sum=0;
+	while(a>0) {
+		int n=a%10;
+		sum=sum+(n*n);
+		a/=10;
+	}
+	return sum;
+}
+}
